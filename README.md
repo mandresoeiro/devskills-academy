@@ -4,11 +4,25 @@ Biblioteca profissional de skills reutilizáveis para agentes de IA e desenvolvi
 
 ## Estado do projeto
 
-Projeto em planejamento. Este primeiro registro publica a proposta original; o catálogo de 150 skills, as ferramentas e as skills serão desenvolvidos nas próximas etapas.
+Catálogo inicial com **160 skills planejadas em 40 categorias**: 40 P1, 80 P2 e 40 P3. Nenhuma skill está implementada ou testada. A primeira selecionada é **DSA-057 — Preparar commits sem segredos**.
 
 ## Documentação
 
 - [Proposta e requisitos do projeto](docs/PROJETO.md)
+- [Catálogo e indicadores](catalog/README.md)
+- [Inventário completo em JSON](catalog/skills.json)
+- [Escopo e primeiro passo da skill inicial](docs/PRIMEIRA-SKILL.md)
+
+## Validação local
+
+Requer Python 3.10 ou superior, sem dependências externas.
+
+```sh
+python scripts/validate_catalog.py
+python -m unittest discover -s tests -v
+```
+
+O validador confere campos, datas, prioridades, status, duplicações, caminhos e correspondência com a tabela do catálogo. Os testes verificam rejeição de dados inválidos; não representam testes das skills planejadas.
 
 ## Arquitetura planejada
 
@@ -32,3 +46,5 @@ A compatibilidade com cada agente será verificada individualmente. Nenhuma comp
 ## Licença
 
 A definir pelo responsável pelo projeto.
+
+
